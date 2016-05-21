@@ -10,8 +10,8 @@ app.get( '/', function( req, res ) {
 io.on('connection', function(socket) {
     console.log('connection');
     io.emit('message', { msg: 'Hello new user' });
-	socket.on('message', function(msg) {
-		io.emit('message', { for: 'everyone', msg: 'You sent: ' + msg });
+	socket.on('message', function(data) {
+		io.emit('message', { for: 'everyone', msg: 'You sent: ' + data.msg });
 		console.log('Message event: ', msg);
 	});
 });
