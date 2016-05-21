@@ -11,7 +11,7 @@ io.on('connection', function(socket) {
     console.log('connection');
     io.emit('message', { msg: 'Hello new user' });
 	socket.on('message', function(msg) {
-		io.emit('some event', { for: 'everyone', msg: 'You sent: ' + msg });
+		io.emit('message', { for: 'everyone', msg: 'You sent: ' + msg });
 		console.log('Message event: ', msg);
 	});
 });
