@@ -1,6 +1,7 @@
 /// <reference path="../typings/tsd.d.ts"/>
 let socketIO = require('socket.io');
 let koa = require('koa');
+let cors = require('koa-cors');
 
 let sio = socketIO();
 // sio.serveClient(true); // the server will serve the client js file
@@ -17,7 +18,10 @@ sio.on('connection', function(socket) {
 	// this.body = 'Hello World';
 // });
 let app = koa();
-app.listen(3000);
+app.use(cors());
 sio.attach(app);
+
+
+app.listen(3000);
 
 console.log('Hello world');
