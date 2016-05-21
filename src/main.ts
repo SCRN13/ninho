@@ -12,7 +12,7 @@ io.on('connection', function(socket) {
     io.emit('message', { msg: 'Hello new user' });
 	socket.on('message', function(data) {
 		io.emit('message', { for: 'everyone', msg: 'You sent: ' + data.msg });
-		console.log('Message event: ', msg);
+		console.log('Message event: ', data.msg);
 	});
 });
 
