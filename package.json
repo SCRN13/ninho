@@ -1,0 +1,19 @@
+{
+  "name": "ninho",
+  "version": "1.0.0",
+  "description": "backend for mocho",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCRN13/ninho.git"
+  },
+  "author": "Sjoerd Rappard <s.f.rappard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SCRN13/ninho/issues"
+  },
+  "homepage": "https://github.com/SCRN13/ninho#readme"
+}
