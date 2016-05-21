@@ -10,10 +10,9 @@ app.get( '/', function( req, res ) {
 io.on('connection', function(socket) {
     console.log('connection');
     io.emit('message', { msg: 'Hello new user' });
-});
-
-io.on('message', function(socket) {
-	console.log('Message event');
+	socket.on('message', function(msg) {
+		console.log('Message event: ', msg);
+	});
 });
 
 http.listen( 4000, function() {
