@@ -15,7 +15,9 @@ sio.on('connection', function(socket) {
 
 
 let app = koa();
-app.use(()=> this.body = 'Hello World');
+app.use(function* () {
+	this.body = 'Hello World';
+});
 app.use(cors({credentials: true}));
 sio.attach(app);
 
