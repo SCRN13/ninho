@@ -18,7 +18,7 @@ sio.on('connection', function(socket) {
 	// this.body = 'Hello World';
 // });
 let app = koa();
-app.use(cors());
+app.use(cors({credentials: true}));
 sio.attach(app);
 
 
